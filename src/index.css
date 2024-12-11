@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Archia';
+  src: url('https://uploads-ssl.webflow.com/5e2520252e290c852ed89624/5e252025f2aac3b4f4888d13_Archia-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@layer base {
+  body {
+    @apply bg-[#F5F5F4];
+    font-family: 'Archia', sans-serif;
+  }
+}
+
+@layer components {
+  .segucargo-input {
+    @apply mt-1 block w-full rounded-md border-gray-300 shadow-sm 
+    focus:border-[#002DA4] focus:ring focus:ring-[#002DA4] focus:ring-opacity-50
+    bg-white/90;
+  }
+
+  .segucargo-button {
+    @apply transition-all duration-200 rounded-md font-medium;
+  }
+
+  .segucargo-button-primary {
+    @apply segucargo-button bg-[#001E5D] text-white 
+    hover:bg-[#002DA4] active:bg-[#001540];
+  }
+
+  .segucargo-button-secondary {
+    @apply segucargo-button bg-[#2AD4AE] text-[#001E5D]
+    hover:bg-[#4CDEBB] active:bg-[#1FB696];
+  }
+
+  .segucargo-card {
+    @apply bg-white rounded-lg shadow-md border border-gray-100;
+  }
+}
